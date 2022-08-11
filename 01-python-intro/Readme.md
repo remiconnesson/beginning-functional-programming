@@ -28,4 +28,5 @@ I'm gonna work through "an introduction to functional programmin" by Mary Rose C
 **Deterministic Process**
 > A process is deterministic if repetitions yield the same result every time.
 
-
+Mary Rose Cook says about the above stuff :
+> Ignore all that. Functional code is characterised by one thing: the absence of side effects. It doesn’t rely on data outside the current function, and it doesn’t change data that exists outside the current function. Every other “functional” thing can be derived from this property. Use it as a guide rope as you learn.
