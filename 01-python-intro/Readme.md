@@ -34,3 +34,32 @@ Mary Rose Cook says about the above stuff :
 # Takeaway
 
 - replace loop by passing state to a recursive function of that state
+- replace sequence of statements affecting the same state by a pipeline 
+
+From the tutorial: 
+
+```python
+print pipeline_each(bands,
+										[set_canada_as_country,
+                    strip_punctuation_from_name,
+										capitalize_names])
+```
+
+> This code is easy to understand. It gives the impression that the auxiliary functions are functional because they seem to be chained together. The output from the previous one comprises the input to the next. If they are functional, they are easy to verify. They are also easy to reuse, easy to test and easy to parallelize.
+
+> This contrast between the mutability of strings and dictionaries in Python illustrates the appeal of languages like Clojure. The programmer need never think about whether they are mutating data. They aren’t.
+
+```python
+def assoc(_d, key, value):
+    from copy import deepcopy
+		d = deepcopy(_d)
+		d[key] = value
+		return d
+
+def call(fn, key):
+    def apply_fn(record):
+        return assoc(record, key, fn(record.get(key)))
+		return apply_fn
+```
+
+> Five. There is no mention of bands in the call() code. That is because call() could be used to generate pipeline functions for any program, regardless of topic. Functional programming is partly about building up a library of generic, reusable, composable functions.
