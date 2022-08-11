@@ -40,9 +40,9 @@ From the tutorial:
 
 ```python
 print pipeline_each(bands,
-										[set_canada_as_country,
-                    strip_punctuation_from_name,
-										capitalize_names])
+			[set_canada_as_country,
+			 strip_punctuation_from_name,
+			 capitalize_names])
 ```
 
 > This code is easy to understand. It gives the impression that the auxiliary functions are functional because they seem to be chained together. The output from the previous one comprises the input to the next. If they are functional, they are easy to verify. They are also easy to reuse, easy to test and easy to parallelize.
@@ -52,9 +52,9 @@ print pipeline_each(bands,
 ```python
 def assoc(_d, key, value):
     from copy import deepcopy
-		d = deepcopy(_d)
-		d[key] = value
-		return d
+	d = deepcopy(_d)
+	d[key] = value
+	return d
 
 def call(fn, key):
     def apply_fn(record):
