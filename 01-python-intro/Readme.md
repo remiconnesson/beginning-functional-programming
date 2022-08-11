@@ -62,4 +62,16 @@ def call(fn, key):
 		return apply_fn
 ```
 
+
 > Five. There is no mention of bands in the call() code. That is because call() could be used to generate pipeline functions for any program, regardless of topic. Functional programming is partly about building up a library of generic, reusable, composable functions.
+
+# Conclusion
+> What now?
+
+>Functional code co-exists very well with code written in other styles. The transformations in this article can be applied to any code base in any language. Try applying them to your own code.
+
+> Think of Mary, Isla and Sam. Turn iterations of lists into maps and reduces.
+
+> Think of the race. Break code into functions. Make those functions functional. Turn a loop that repeats a process into a recursion.
+
+> Think of the bands. Turn a sequence of operations into a pipeline.
