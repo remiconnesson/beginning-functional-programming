@@ -16,6 +16,8 @@ if height_count > 0:
     print(average_height)
 
 # Functional Code
+# ... my solution
+
 from functools import reduce
 
 accumulateur = {"total":0, "count":0}
@@ -33,3 +35,29 @@ accumulateur = reduce(lambda a,x : sum_and_count(a, x["height"]),
 if accumulateur["count"] > 0:
     average_height = accumulateur["total"] / accumulateur["count"]
     print(average_height)
+
+"""
+Note to myself:
+I was trying to avoid "unrolling" the generator with `list(gen)` to get the count.
+"""
+
+# Functional Code
+# ... Mary's Solution
+from functools import reduce
+from operator import add
+
+people_with_heights = filter(lambda x: "height" in x, people)
+heights = map(lambda x: x["height"], people_with_heights)
+
+# Mary's Solution struggle with Python3 (it was written in python2)
+heights = list(heights) # here we "unroll" the generator, I dunno if that matters or not.
+
+if len(heights) > 0:
+    total_height = reduce(add, heights, 0)
+    average_height = total_height / len(list(heights))
+    print(average_height)
+
+
+
+
+
