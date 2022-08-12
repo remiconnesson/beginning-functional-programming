@@ -11,6 +11,20 @@ let lambdaToNumber = lambda => lambda(i => i+1)(0);
 
 console.log([zero, one, two, three].map(lambdaToNumber))
 
+/*
+ * Addition
+ */
+
+let addition = a => b => f => x => b(f)(a(f)(x))
+
+let four = addition(one)(three);
+let five = addition(two)(three);
+let teteAToto = addition(zero)(zero);
+
+console.log(lambdaToNumber(four));
+console.log(lambdaToNumber(five));
+console.log(lambdaToNumber(teteAToto));
+
 
 
 
