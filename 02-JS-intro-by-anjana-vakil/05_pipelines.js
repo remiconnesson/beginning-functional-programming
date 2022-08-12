@@ -41,3 +41,14 @@ function pipeline2(...functions) {
 }
 console.log('pipeline implemented using reduce');
 functions.map(funcs => console.log(pipeline2(...funcs)(1))); 
+
+/*
+ * Map 
+ */
+function map(func, array) {
+  if (array.length === 1) return func(array[0]);
+  return [func(array[0])].concat(map(func, array.slice(1)));
+}
+
+console.log("Map")
+console.log(map(x => x * 2, [1, 2, 3]))
