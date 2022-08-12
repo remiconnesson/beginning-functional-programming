@@ -30,3 +30,14 @@ console.log(
   reduce((acc, x) => acc + x, 0, [1, 2, 3])
 )
 
+/*
+ * Pipeline with Reduce
+ */
+
+function pipeline2(...functions) {
+  return function(x) {
+    return reduce( (acc, fn) => fn(acc), x, functions)
+  } 
+}
+console.log('pipeline implemented using reduce');
+functions.map(funcs => console.log(pipeline2(...funcs)(1))); 
