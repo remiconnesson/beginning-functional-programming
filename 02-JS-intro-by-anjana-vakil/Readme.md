@@ -20,3 +20,9 @@ const woot = (n) => {
 	return woo(n, "") // base case passed through the func
 }
 ```
+
+---
+
+A predicate function is a function that returns boolean.
+
+---
