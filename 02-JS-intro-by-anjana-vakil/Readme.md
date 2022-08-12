@@ -26,3 +26,21 @@ const woot = (n) => {
 A predicate function is a function that returns boolean.
 
 ---
+
+Partial application
+
+```javascript
+const add_a_and_b = (a, b) => a + b;
+
+const add_5_to_a = (a) =>  add_a_and_b(a, 5) ;
+
+const make_add_X_function = (x) => {
+	return function(a) {
+		return add_a_and_b(a, x)
+	}
+}
+```
+
+
+```
+
