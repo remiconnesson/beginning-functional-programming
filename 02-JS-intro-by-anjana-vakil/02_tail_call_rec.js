@@ -12,4 +12,18 @@ const sum_array = (arr) => {
 
 console.log(sum_array([1, 2, 3]));
 
+/*
+ * factorial
+ */
+
+const factorial = (n) => {
+	const func = (n, acc) => {
+		if ( n === 0 ) return acc;
+		return func(n-1, acc * n);
+	}
+	return func(n, 1);
+}
+
+console.log(factorial(10), 10*9*8*7*6*5*4*3*2*1)
+
 
