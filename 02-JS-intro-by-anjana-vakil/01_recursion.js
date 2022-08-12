@@ -1,3 +1,7 @@
+/*
+ * Sum of an array
+ */
+
 function sum1 (numbers) {
 	let total = 0;
 	for (i=0; i < numbers.length ; i++) {
@@ -29,3 +33,23 @@ function sum3 (numbers) {
 }
 
 console.log(sum3([0, 1, 2, 3, 4]));
+
+/*
+ * Fibonnaci
+ */
+
+function fibonnaci(n) {
+	if (n < 2) {
+		return n
+	}
+	return fibonnaci(n - 1) + fibonnaci(n - 2)
+}
+
+
+console.log("fiobonnaci ", fibonnaci(20));
+
+/*
+ *
+ */
+
+
