@@ -26,4 +26,26 @@ const factorial = (n) => {
 
 console.log(factorial(10), 10*9*8*7*6*5*4*3*2*1)
 
+/*
+ * fibonnaci
+ */
+const fibonnaci = (n) => {
+	const func = (n, current, next) => {
+		if (n === 0) return current;
+		return func(n - 1, next, current + next)
+	}
+	return func(n, 0, 1)
+}
+
+const loop_fibo = (n) => {
+	const func = (n, i) => {
+		console.log(i, fibonnaci(i));
+		if (n === 0) return;
+		func(n-1, i + 1)
+	}
+	func(n, 0);
+}
+
+loop_fibo(21);
+
 
