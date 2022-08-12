@@ -26,5 +26,12 @@ console.log(lambdaToNumber(five));
 console.log(lambdaToNumber(teteAToto));
 
 
+/*
+ * Multiplication
+ */
 
+let multiplication = a => b => f => x => b(a(f))(x);
 
+let twenty = multiplication(four)(five);
+
+console.log(lambdaToNumber(twenty));
