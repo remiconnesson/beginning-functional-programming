@@ -35,3 +35,18 @@ let multiplication = a => b => f => x => b(a(f))(x);
 let twenty = multiplication(four)(five);
 
 console.log(lambdaToNumber(twenty));
+
+/*
+ * Booleans
+ */
+
+let TRUE = a => b => a;
+let FALSE = a => b => b;
+let IF_ELSE = bool => a => b => bool(a)(b);
+
+let tired = TRUE;
+// IF_ELSE(condition)(if-true)(if-false)
+let coffee = IF_ELSE(tired)(three)(zero)
+
+console.log(lambdaToNumber(coffee))
+
