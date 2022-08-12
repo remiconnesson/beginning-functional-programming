@@ -17,3 +17,16 @@ let functions = [
 ]
 
 functions.map(funcs => console.log(pipeline(...funcs)(1))); 
+
+/*
+ * Reduce
+ */
+function reduce(reducerFn, acc, array) {
+  if (array.length === 0) return acc;
+  return reduce(reducerFn, reducerFn(acc, array[0]),array.slice(1))
+}
+
+console.log( 
+  reduce((acc, x) => acc + x, 0, [1, 2, 3])
+)
+
