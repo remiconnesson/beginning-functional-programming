@@ -44,3 +44,13 @@ const make_add_X_function = (x) => {
 
 ```
 
+---
+
+# Lambda Calculus
+
+video : https://youtu.be/qTHGmVrOGZo 
+
+- abstraction defines a function `λx.x` : `x => x`
+- currying : `λxλy.x+y` : `x => y => x + y`
+- application (call a function) `(λxλy.x+y) 5 1` : `(x => y => x + y)(5)(1)`
+
